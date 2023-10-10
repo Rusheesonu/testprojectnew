@@ -1,0 +1,28 @@
+[
+    {
+        "Event ID": "2D005F05828C17F1",
+        "Event Title": "Travis Scott Utopia Tour Presents Circus Maximus",
+        "Event Date": "2023-10-11T20:00",
+        "Location": {
+            "name": "Spectrum Center ",
+            "address": {
+                "streetAddress": "333 East Trade Street",
+                "addressLocality": "Charlotte",
+                "addressRegion": "NC",
+                "postalCode": "28202",
+                "addressCountry": "US",
+                "@type": "PostalAddress"
+            },
+            "sameAs": "https://www.ticketmaster.com/spectrum-center--tickets-charlotte/venue/369357",
+            "image": "https://s1.ticketm.net/dbimages/18670v.jpg",
+            "geo": {
+                "latitude": "35.225222",
+                "longitude": "-80.839921",
+                "@type": "GeoCoordinates"
+            },
+            "@type": "Place"
+        },
+        "Image URL": "https://s1.ticketm.net/dam/a/900/d0e95074-2a57-4b0e-8cce-781b43a2a900_EVENT_DETAIL_PAGE_16_9.jpg",
+        "Event URL": "https://www.ticketmaster.com/travis-scott-utopia-tour-presents-circus-charlotte-north-carolina-10-11-2023/event/2D005F05828C17F1"
+    }
+]

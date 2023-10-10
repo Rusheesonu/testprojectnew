@@ -1,0 +1,720 @@
+[
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_24"
+        ],
+        "count": 22,
+        "places": [
+            "GEYDCOS[2HI[2Q,3[A,Q],4[A,Q],YTA],OHI[2A,ZQ],QHI[4[A,Q],YT[C,E]],SHI[2A,ZQ],XHI[3Q,4[A,Q],YTA],ZHI[3Q,4[A,Q],YTA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_25"
+        ],
+        "count": 112,
+        "places": [
+            "GEYDEOS[2HI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q]],BIE5D[C[N[A,I,Q,Y],O[A,I]],E[M[A,I,Q,Y],N[A,I,Q]],G,I,K,M,O,Q,S],CII5D[CO[A,I],EN[A,I,Q,Y],M,O],DIM5D[C[,N[A,I,Q,Y],O[A,I]],E[,M[A,I,Q,Y],N[A,I,Q,Y]],G,I,K,M,O,Q,S],EIQ5D[C[NY,O[A,I]],EM[A,I,Q],G,I],FIU5D[CMA,E[MY,NA],G,I,K,M,S],MHI[2A,YQ,Z[A,Q]],OHI[2Q,3[A,Q],4A],QHI[4[A,Q],YT[A,C,I,K,M,O]],WHI[4Q,YTA],YHI[3[A,Q],4[A,Q],YT[G,I,K,M,O,Q,S],ZDA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_25"
+        ],
+        "count": 10,
+        "places": [
+            "GEYDEOS[MHI[2Q,3A],RHI[2[A,Q],3A,ZQ]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_26"
+        ],
+        "count": 72,
+        "places": [
+            "GEYDGOS[BIE5DE[N[I,Q,Y],OA],DIM5DCM[Q,Y],EHI[3Q,4A],FIU5D[EM[I,Q],M,O,Q,S],IHIYT[M,O],JHIYT[M,O],MHI[Y[Q,T[C,E,G,I,K,M,O,Q]],ZA],NHIZD[E,G],PHI[YTS,Z[D[A,G,I,K,M,O,Q,S],TA]],QHIYT[A,C,E,G,I,K,M,O],RHI[2[A,Q],3[A,Q],4[A,Q],YTA,Z[D[M,O,Q,S],Q,T[A,C]]],SHIZ[DS,TA],UHI[3Q,4A],XHIZ[DS,TA],YHIYT[I,K,Q,S]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_26"
+        ],
+        "count": 17,
+        "places": [
+            "GEYDGOS[KHI[2A,YT[K,M],ZQ],RHIZT[E,G],XHI[2[A,Q],3A,YQ,Z[A,Q]],YHIYT[A,C]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_27"
+        ],
+        "count": 44,
+        "places": [
+            "GEYDIOS[GHI[2A,ZQ],HHI[3Q,4A],IHI[2[A,Q],3[A,Q],4[A,Q],YT[A,E,G],ZQ],JHI[2[A,Q],3[A,Q],4A,YT[G,I],ZQ],KHI[2A,ZQ],LHI[2Q,3[A,Q],4[A,Q],YT[A,K,M,O,Q]],NHI[4Q,YT[A,G,I,K,M,O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_27"
+        ],
+        "count": 29,
+        "places": [
+            "GEYDIOS[HHI[2A,ZQ],KHI[2Q,3A],MHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],PHI[2[A,Q],3[A,Q],YQ,Z[A,Q]],QHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],THI[2Q,3A]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_28"
+        ],
+        "count": 32,
+        "places": [
+            "GEYDKOS[BHIZ[A,Q],EHIYT[G,I],GHI[3Q,4[A,Q],YT[A,C,E,G,I]],JHIYT[G,I],OHIYT[C,E],PHI[2Q,3[A,Q],4[A,Q],YT[A,C,E],ZD[C,E]],RHIZD[C,E],SHI[2Q,3[A,Q],4A]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_28"
+        ],
+        "count": 31,
+        "places": [
+            "GEYDKOS[LHI[2Q,3A],MHI[2[A,Q],3A,4Q,Y[Q,T[A,C,E]],Z[A,Q]],OHI[2[A,Q],3A,4Q,Y[Q,T[A,O,Q,S]],Z[A,DA,Q]],QHIYT[G,I,K,M,O,Q,S]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_29"
+        ],
+        "count": 21,
+        "places": [
+            "GEYDMOS[BHIYT[E,G],QHIYT[C,E,G,I],RHI2[A,Q],SHI[2A,YQ,Z[A,Q]],THI[2Q,3[A,Q],4A,YT[I,K,M,O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_29"
+        ],
+        "count": 61,
+        "places": [
+            "GEYDMOS[GHI[4Q,YT[A,C,E]],HHIYT[C,E,K,M],IHI[4Q,YT[A,C,E,K,M]],JHIYT[C,E,G,I,O,Q],LHIYT[C,E,K,M,O,Q],MHIYT[C,E,G,I],OHI[2[A,Q],3A,YQ,Z[A,Q]],PHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,TA],Z[A,Q]],QHI[2[A,Q],3A,4Q,Y[Q,TA],Z[A,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_61"
+        ],
+        "count": 80,
+        "places": [
+            "GEYDOOS[DHI[3Q,4A],EHI[2[A,Q],3A,ZQ],FHI[2[A,Q],3[A,Q],4[A,Q],YTA,Z[A,Q]],GHI[2[A,Q],3[A,Q],4[A,Q],YTA,Z[A,Q]],HHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,TA],ZA],IHI[2[A,Q],3[A,Q],4[A,Q],YTA],JHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],KHI[2A,3Q,4[A,Q],Y[Q,TA],Z[A,Q]],LHI[2Q,3[A,Q],4[A,Q],YTA],MHI[2Q,3A,4Q,YTA],NHI[3[A,Q],4[A,Q],YT[A,C]],OHI3[A,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_61"
+        ],
+        "count": 4,
+        "places": [
+            "GEYDOOSRHI[2A,YQ,Z[A,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_62"
+        ],
+        "count": 67,
+        "places": [
+            "GEYTEOS[EHI[4[A,Q],YT[A,C]],FHI[2[A,Q],3[A,Q],4[A,Q],YTA,ZQ],GHI[2Q,3[A,Q],4[A,Q],YT[A,C,E,G]],HHI[3[A,Q],4[A,Q],YT[A,C,E,I,K]],IHIYT[E,G],KHIYT[C,E,G,I,K],LHIYT[I,K,M,O,Q,S],MHIYT[K,M,O,Q,S],NHI[YT[O,Q,S],ZD[A,C,E]],OHI[YT[M,O,Q,S],ZD[A,C,E]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_62"
+        ],
+        "count": 4,
+        "places": [
+            "GEYTEOSOHIZD[G,I,K,M]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_30"
+        ],
+        "count": 18,
+        "places": [
+            "GEYTGOS[BHI[2Q,3[A,Q],4[A,Q]],OHI[2[A,Q],3[A,Q],YQ,Z[A,Q]],QHI[3[A,Q],YQ,ZA],RHI[3Q,4A]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_30"
+        ],
+        "count": 62,
+        "places": [
+            "GEYTGOS[HHI[YQ,ZA],JHI[2Q,3[A,Q],4A,YQ,ZA],KHI[2[A,Q],3[A,Q],4[A,Q],ZQ],LHI[2A,3Q,4A,ZQ],MHIYT[C,E,G,I,O,Q],NHI[2[A,Q],3[A,Q],4A,ZQ],PHI[4Q,YT[A,C,E,G,I,K,M,O,Q]],QHI[4Q,YT[A,C,E,K,M]],RHI[4Q,YT[A,C,E,G,I,K,M,O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_31"
+        ],
+        "count": 55,
+        "places": [
+            "GEYTIOS[BHI[2Q,3A,YT[E,G,I,K,M,O,Q,S],ZDA],GHI[2Q,3A,4Q,YT[A,C,E,G,I,K,O,Q,S],ZDA],HHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q]],KHIYT[C,E],QHI[2A,YQ,Z[A,Q]],RHI[4Q,YT[A,C,E]],SHI[2Q,3[A,Q],4[A,Q],YTA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_31"
+        ],
+        "count": 62,
+        "places": [
+            "GEYTIOS[LHIYT[I,K,M,O],MHI[2Q,3[A,Q],4[A,Q],YT[A,G,I,K,M,O]],NHI[2Q,3[A,Q],4A,YT[G,I,K,M,O,Q,S],ZD[A,C,E]],OHI[2A,3Q,4[A,Q],Y[Q,TA],Z[A,Q]],PHI[2A,Y[Q,T[G,I,K,M,O,Q,S]],Z[A,DA,Q]],QHI[YT[C,E,G,I,K,M,O,Q,S],ZD[A,C,E]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_32"
+        ],
+        "count": 64,
+        "places": [
+            "GEYTKOS[GHIYT[I,K],HHI[3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M]],IHI[2Q,3[A,Q],4[A,Q],YT[A,E,G,I,K]],JHI[2[A,Q],3[A,Q],4A,YT[C,E,G,I,K,M],ZQ],LHI[2A,4Q,Y[Q,TA],Z[A,Q]],MHI[3Q,4A],NHI[4Q,YTA],OHI[2A,YT[C,E,G,I,K,M,O,Q],ZQ],PHI[4Q,YT[A,G,I,K,M,O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_32"
+        ],
+        "count": 20,
+        "places": [
+            "GEYTKOS[IHI[YQ,ZA],MHI[2Q,3A],PHI[3Q,4A],QHIYT[E,G],RHI[2[A,Q],3[A,Q],YT[O,Q],Z[A,Q]],SHIYT[K,M,O,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_33"
+        ],
+        "count": 123,
+        "places": [
+            "GEYTMOS[2HIZ[D[O,Q,S],T[A,C,E]],BIE5D[E[MY,NA],KM[I,Q]],CII5D[C[M[A,I,Q,Y],N[A,I]],I[NY,OA],MM[A,I,Q,Y],Q,S],DIM5D[C[M[A,I,Q,Y],N[A,Q,Y],O[A,I]],E[M[A,I,Q,Y],N[A,I,Q,Y]],O,Q,S],EIQ5DCN[Q,Y],JHIYT[C,E],NHI[2[A,Q],3A,ZQ],OHI[2Q,3[A,Q],4A,YT[M,O,Q,S],ZD[C,E,K,M]],PHI[2D[A,C,E],ZT[G,I,K,M,O,Q,S]],QHI[2[A,D[Q,S],Q],3[A,Q],YQ,Z[A,Q,T[O,Q]]],RHI[2D[A,C,E,G],YTS,Z[DA,T[M,O,Q,S]]],SHI[2A,YQ,Z[A,Q]],UHIZD[E,G],WHI[2A,YQ,Z[A,DS,Q,TA]],XHI2[DS,TA],YHIZD[A,C,E,G,I,K],ZHI[2T[C,E,G,I,O,Q],YT[O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_33"
+        ],
+        "count": 49,
+        "places": [
+            "GEYTMOS[BIE5DIN[Q,Y],DIM5D[GOI,I[M[A,I,Q],N[I,Q,Y],OA]],IHI[4Q,YTA],LHI[4[A,Q],ZD[O,Q]],MHI[2[DA,Q],3[A,Q],4A,YT[M,O,Q,S],ZT[A,C,E,G,I,S]],ZHIZD[G,I,K,M,O]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_34"
+        ],
+        "count": 52,
+        "places": [
+            "GEYTOOS[BIE5D[G,I],CII5D[C[,MA],E,G,I,K,M,O,Q,S],FHIYT[E,G],KHIYT[C,E,G,I,K,M],OHIYT[G,I],PHI[4Q,YT[A,C,E,G,I,K,M]],QHI[4Q,YT[A,C,E,G,I,K,M]],RHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],WHI[2Q,3A],ZHI[3Q,4[A,Q],YTA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_34"
+        ],
+        "count": 4,
+        "places": [
+            "GEYTOOS[JHI[4Q,YTA],YHI[3Q,4A]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_35"
+        ],
+        "count": 54,
+        "places": [
+            "GIYDCOS[BHI[2[A,Q],3[A,Q],4A,Y[Q,T[G,I,K,M,O,Q]],Z[A,Q]],DHI[Y[Q,T[A,C,E,G]],ZA],IHI[2A,YQ,Z[A,Q]],JHI[4[A,Q],YT[A,C,E,G,I,K]],KHI[2A,YT[K,M,O,Q,S],Z[DA,Q]],LHI[3Q,4A,YT[C,E,G,I]],MHI[4Q,YT[A,S],ZDA],OHIYT[G,I],PHIZD[I,K]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_36"
+        ],
+        "count": 22,
+        "places": [
+            "GIYDEOS[BHI[2A,3[A,Q],YQ,Z[A,Q]],GHI[2A,ZQ],HHI[2A,ZQ],IHI[2A,YQ,Z[A,Q]],QHIYT[G,I,K,M,O,Q],RHIZD[C,E]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_37"
+        ],
+        "count": 58,
+        "places": [
+            "GIYDGOS[BHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,G,I,S]],Z[A,DA]],CHI[YQ,ZA],DHI[4Q,YT[A,G,I]],JHI[2A,Y[Q,T[A,C,K,M]],Z[A,Q]],LHI[YQ,ZA],MHIYT[G,I],NHI[3Q,4[A,Q],YTA],OHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],PHIYT[G,I,K,M],QHI[4Q,Y[Q,TA],Z[A,D[C,E]]],RHI[3Q,4A,YQ,ZA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_38"
+        ],
+        "count": 46,
+        "places": [
+            "GIYDIOS[BHI[2[A,Q],3A,ZQ],JHIZ[A,Q],KHI[4Q,YTA],LHIYT[A,C],MHIYT[G,I],OHI[YQ,Z[A,D[A,C]]],PHI[Y[Q,T[C,E,G,I,K,M]],ZA],QHI[YQ,Z[A,D[E,G]]],RHI[2Q,3[A,Q],4[A,Q],Y[Q,T[A,C,E,M,O,Q,S]],ZA],SHIZD[A,C,G,I]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_43"
+        ],
+        "count": 100,
+        "places": [
+            "GIYDKOS[BHI[4[A,Q],YT[A,C,E,G,I,K,M,O]],DHI[3Q,4[A,Q],YT[A,C,E]],IHI[2[A,Q],3[A,Q],4[A,Q],YTA,ZQ],LHI[2A,YQ,Z[A,Q]],MHI[2A,YQ,Z[A,Q]],NHIYT[A,C,E,G],OHI[2Q,3A],PHI[YT[K,M,O,Q,S],ZD[A,C,E]],QHIYT[C,E],RHI[2A,3Q,4[A,Q],Y[Q,T[A,C,E,G,I]],Z[A,Q]],SHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S]],THI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S]],UHI[YT[I,K,M,O,Q,S],ZD[A,C]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_44"
+        ],
+        "count": 119,
+        "places": [
+            "GIYDMOS[BHI[2[A,Q],YQ,Z[A,Q]],CHI[3Q,4A],EHI2[A,Q],GHI[YQ,ZA],HHI[2A,YQ,Z[A,Q]],LHI[2A,YT[C,E,G,I],ZQ],MHI[2[A,Q],YT[I,K],Z[A,Q]],OHIYT[K,M,O,Q,S],PHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],QHI[2[A,Q],3A,Y[Q,T[O,Q,S]],Z[A,DA,Q]],RHI[4Q,YT[A,C,E,G,I]],SHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,TA],Z[A,D[E,G],Q]],THIYT[A,C],UHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],Z[D[A,C,E,I,K],Q]],VHI[2Q,3[A,Q],4[A,Q],YT[A,C,E],ZD[C,E,G,I]],WHI[2Q,3[A,Q],4A,YT[G,I,K,M,O,Q,S]],XHIZD[G,I,K,M]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_45"
+        ],
+        "count": 154,
+        "places": [
+            "GIYDOOS[BHI[3[A,Q],Y[Q,T[E,G,I,K,M,O,Q,S]],Z[A,DA]],CHI[2[A,Q],YQ,Z[A,Q]],DHI[4[A,Q],YQ,ZA],GHI[3Q,4A],HHI[2[A,Q],3A,ZQ],IHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],JHI[2[A,Q],3[A,Q]],KHI[Y[Q,T[C,E,G,I,K,M,S]],Z[A,DA]],LHI[3[A,Q],4[A,Q],YT[A,C,E,G,K,M,O,Q,S],ZDA],MHI[YQ,ZA],NHIYT[G,I,K,M,O,Q,S],OHI[Y[Q,T[E,G,I,K]],ZA],PHI[2A,ZQ],QHI[2[A,Q],3[A,Q],YQ,ZA],RHI[2[A,Q],YT[A,C,E,G,I,Q,S]],SHI[2Q,3[A,Q],4[A,Q],YT[A,O,Q,S],ZDA],THI[2[A,Q],3[A,Q],4[A,Q],Y[Q,TA],Z[A,Q]],UHI[YT[C,E,G,I,K,M,S],ZDA],VHI[2A,4Q,Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,DA,Q]],WHI[4Q,Y[Q,TA],ZA],XHI[4Q,YTA],YHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_46"
+        ],
+        "count": 129,
+        "places": [
+            "GIYDQOS[BHI[4[A,Q],YT[A,C,E,G,I,K]],CHI4[A,Q],DHIYT[C,E,G,I],GHI[2[A,Q],3A,Y[Q,T[G,I]],Z[A,Q]],IHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I],ZQ],JHI[2[A,Q],4[A,Q],YT[A,C,E,G]],KHI[4Q,Y[Q,T[A,S]],Z[A,D[A,C,E]]],LHI[YT[K,M,O,Q,S],ZD[A,C,E]],MHI[YTS,ZD[A,C,E]],NHIYT[K,M],OHI[4Q,YT[A,C,E,G,I,K,M]],PHI3[A,Q],QHI[2[A,Q],3A,YT[O,Q,S],Z[D[A,C,E],Q]],RHI[YQ,ZA],SHIZD[C,E],THI[2A,3[A,Q],4[A,Q],YQ,Z[A,Q]],UHI[YT[I,K,M,O,Q],ZD[A,C]],VHI[3Q,4[A,Q],Y[Q,TA],Z[A,D[C,E]]],WHI[Y[Q,T[K,M,O,Q,S]],Z[A,D[A,C,E]]],XHI[2A,4[A,Q],Z[D[C,E],Q]],YHIYT[M,O]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_47"
+        ],
+        "count": 99,
+        "places": [
+            "GIYDSOS[CHIYT[O,Q],DHI[2Q,3[A,Q],4A,YT[G,I]],GHI[3Q,4A],HHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],JHIYT[E,G,I,K],KHI[2[A,Q],3[A,Q],YQ,Z[A,D[A,C],Q]],LHI[2[A,Q],3A,YT[G,I],ZQ],MHIYT[M,O],NHI[YT[C,E,K,M,O,Q,S],ZD[A,C,E]],OHI[2A,4Q,Y[Q,T[A,C,E]],Z[A,Q]],PHI[2Q,3[A,Q],4A],QHI[4Q,YT[A,C,E,G,I,K,M,S],ZDA],RHIYT[M,O],THI[Y[Q,T[I,K]],ZA],UHI3[A,Q],VHI[2Q,3A,4[A,Q],YT[M,O,Q,S]],WHI[Y[Q,T[Q,S]],ZA],XHI[YT[O,Q,S],ZD[A,C,E]],YHI2[A,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_48"
+        ],
+        "count": 180,
+        "places": [
+            "GIYTAOS[BHI[2[A,Q],4[A,Q],YT[A,C,E,G,K,M,Q,S],Z[A,Q]],CHI[4Q,YT[A,C,E,O,Q]],DHI[2Q,3[A,Q],4A,YT[O,Q]],GHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],IHIYT[G,I],KHI[2Q,3A],LHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],MHI[2[A,Q],3A,Y[Q,T[K,M,O,Q]],Z[A,Q]],NHI[2[A,Q],3[A,Q],4[A,Q],YT[A,G,I,K,M,O,Q,S],Z[DA,Q]],OHI[4Q,YT[A,C,E,G,I,K,M,O,Q,S],ZDA],QHI[Y[Q,TS],Z[A,DA]],RHI[2[A,Q],3[A,Q],4A,Y[Q,T[O,Q]],Z[A,Q]],SHI[4[A,Q],Y[Q,TS],Z[A,DA]],THI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],UHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,DA,Q]],VHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q]],Z[A,Q]],WHI[4Q,Y[Q,T[A,C,E,S]],Z[A,DA]],XHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E]],Z[A,Q]],YHI[4Q,YT[A,C,E,G,I,S],ZD[A,C,E]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_55"
+        ],
+        "count": 159,
+        "places": [
+            "GIYTCOS[BHI[2A,3[A,Q],ZQ],CHI[YQ,ZA],DHI4[A,Q],GHI[2A,ZQ],IHI[2[A,Q],3A,YQ,Z[A,Q]],JHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],KHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K]],Z[A,Q]],LHI[2A,4Q,Y[Q,TA],Z[A,Q]],MHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O],ZQ],NHI[4Q,YT[A,C,E,I,K,M,O,Q,S]],OHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I]],Z[A,Q]],PHI[2Q,3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q]],RHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],THIYT[A,C,I,K,M,O],UHI[3Q,4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E]],VHI[2Q,3[A,Q],4[A,Q],YT[A,G,I,K,M,O,Q,S]],WHI[2[A,Q],3A,4Q,Y[Q,T[A,C,E,G,I]],Z[A,Q]],XHI[4Q,YT[A,C,E]],YHI[4Q,YTA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_57"
+        ],
+        "count": 127,
+        "places": [
+            "GIYTEOS[BHI[4[A,Q],YT[A,C],ZD[C,E]],CHI[YQ,ZA],DHI[4Q,YT[A,C,E,G,I]],GHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],HHI[2A,YQ,Z[A,Q]],IHI[3Q,4A],JHI[2[A,Q],YT[M,O,Q,S],ZD[A,C,E]],KHIYT[K,M,O,Q],LHI[2[A,Q],3[A,Q],4A,Y[Q,T[G,I,K,M,O,Q,S]],Z[A,D[A,C,E],Q]],MHI[2[A,Q],3[A,Q],4A,Y[Q,T[O,Q]],Z[A,Q]],NHI[2A,YQ,Z[A,Q]],OHIYT[K,M],PHIZD[C,E],RHI[Y[Q,T[K,M,O,Q,S]],Z[A,D[A,C,E]]],SHI[2[A,Q],4Q,YT[A,C,E,G,I,K,M]],THIYT[G,I,K,M,O,Q],UHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,D[A,C,E],Q]],WHI[4Q,YTA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_59"
+        ],
+        "count": 85,
+        "places": [
+            "GIYTGOS[BHI[2[A,Q],3A,YQ,Z[A,Q]],CHI[3Q,4A],DHI[2Q,3[A,Q],4A],GHI[2A,YQ,Z[A,Q]],JHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G]],Z[A,Q]],KHI[3Q,4A],LHI[2[A,Q],3[A,Q],4A,Y[Q,T[O,Q]],Z[A,Q]],MHI[YT[O,Q,S],ZDA],NHI[2Q,3[A,Q],4A],OHI[2[A,Q],4Q,YT[A,O,Q],ZD[C,E]],PHI[2A,Y[Q,T[K,M,O,Q]],Z[A,Q]],QHI[4Q,YT[A,C,E]],RHI[2[A,Q],3A,Y[Q,T[O,Q,S]],Z[A,DA,Q]],SHIYT[O,Q],THI[2[A,Q],3A,ZQ]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_65"
+        ],
+        "count": 21,
+        "places": [
+            "GIYTIOS[B[G[E5D[C[N[Q,Y],OI],EMA],M5D[C[MY,NA],EM[I,Q]]],HI[4[A,Q],YT[Q,S]]],DHIYT[C,E,G,I,O,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_67"
+        ],
+        "count": 37,
+        "places": [
+            "GIYTMOS[B[G[E5D[C[MY,NA],O,Q],M5D[C[M[A,I,Q,Y],NA],I,K,M,O,Q,S]],HI[3Q,4[A,Q],YT[A,C,E,K,M]]],DHI[2Q,3A,YT[G,I,K,M,O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_68"
+        ],
+        "count": 5,
+        "places": [
+            "GIYTOOSDHI[2A,4Q,YTA,ZQ]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_69"
+        ],
+        "count": 26,
+        "places": [
+            "GIYTQOSB[G[E5D[K,M],M5D[C[,N[I,Q,Y],O[A,I]],E,G,I,K,M]],HI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,Q,S]],Z[A,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_69"
+        ],
+        "count": 4,
+        "places": [
+            "GIYTQOSBHIYT[G,I,K,M]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_71"
+        ],
+        "count": 4,
+        "places": [
+            "GIZDAOS[BGM5D[G,I],DHI3[A,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_60"
+        ],
+        "count": 83,
+        "places": [
+            "GIZDCOS[BHI[2[A,Q],3A,ZQ],CHI[YQ,ZA],DHI[2[A,Q],3[A,Q],4A],EHI[2A,YQ,Z[A,Q]],FHI[2Q,3A],HHI[2[A,Q],3[A,Q]],IHI[3Q,4A],JHI[YQ,ZA],KHI[3Q,4[A,Q],Y[Q,TA],ZA],LHI[4Q,YT[A,C,E,G,I,K,M]],MHI[4Q,YT[A,C,E,G,I,K,M,O,Q]],NHIYT[K,M],OHIYT[G,I,K,M],PHI[4Q,YT[A,G,I]],QHI[YT[C,E],ZD[C,E,G,I]],RHIYT[M,O,Q,S],SHI[3Q,4[A,Q],YT[A,Q,S]],THIZD[A,C,K,M],UHI[YTS,ZD[A,O,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_60"
+        ],
+        "count": 10,
+        "places": [
+            "GIZDCOS[RHI[2A,YQ,Z[A,Q]],UHIZD[C,E,G,I,K,M]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_58"
+        ],
+        "count": 110,
+        "places": [
+            "GIZDEOS[BHI[4Q,YT[A,C,E,O,Q,S],ZD[A,C,E]],CHI[2A,ZQ],GHIYT[K,M],HHI[YQ,ZA],IHI[YQ,ZA],JHI[3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E]],KHI[2A,YT[M,O],ZQ],LHIYT[M,O,Q,S],MHI[4[A,Q],YT[A,C,E,G,I,K]],NHIYT[C,E],OHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K]],Z[A,Q]],PHI[Y[Q,T[M,O,Q,S]],Z[A,D[A,C]]],QHI[2[A,Q],3A,4Q,Y[Q,T[A,C,E,G,I,K,M]],Z[A,Q]],RHI[2[A,Q],3[A,Q],4A,YT[I,K,M,O],ZQ],THI[2[A,Q],3[A,Q],4[A,Q],YTA,ZQ],UHIYT[E,G]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_56"
+        ],
+        "count": 183,
+        "places": [
+            "GIZDGOS[BHI[2[A,Q],3[A,Q]],CHI[3Q,4A,YQ,ZA],DHI[2[A,Q],3[A,Q],4[A,Q]],EHI[2A,ZQ],IHI[3Q,4A],JHI[2[A,Q],3A,YQ,Z[A,Q]],KHI[Y[Q,T[A,C,E,G,I,K]],ZA],LHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,G,I,K,M,O]],Z[A,Q]],MHI[4Q,YT[A,C,E,G,I]],NHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],OHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],PHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,DA,Q]],QHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I]],Z[A,Q]],RHI[2[A,Q],3[A,Q],4A,Y[Q,T[E,G,I,K,Q,S]],Z[A,D[C,E],Q]],SHI[2A,3Q,4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,DA,Q]],THI[4Q,YTA],UHI[2A,Y[Q,T[C,E,G,I,K,M,O,Q,S]],Z[A,D[A,I,K],Q]],VHI[2[A,Q],3A,Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,D[A,C,E,K,M],Q]],YHI[YT[K,M],ZD[C,E,G,I,K]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_49"
+        ],
+        "count": 124,
+        "places": [
+            "GIZDIOS[DHI[YQ,ZA],HHI[4Q,YTA],IHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],JHI[3Q,4A,YT[K,M,O,Q]],KHI[3Q,4[A,Q],YT[A,O,Q,S],ZDA],LHI[2[A,Q],3[A,Q],4A,Y[Q,T[G,I,K,M,O,Q]],Z[A,Q]],MHI[2A,YQ,Z[A,Q]],NHIYT[A,C],OHI[Y[Q,T[K,M]],ZA],PHI[2[A,Q],3A,Y[Q,T[G,I]],Z[A,Q]],QHI[YT[G,I,K,M,O,Q,S],ZDA],RHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]],THI[2A,Y[Q,T[G,I,K,M]],Z[A,Q]],UHI[YT[G,I,K,M,O,Q,S],ZDA],VHI[2A,YT[G,I,K,M,O,Q,S],Z[DA,Q]],WHI[YT[G,I,K,M,O,Q,S],ZDA],XHI[2[A,Q],3A,YQ,Z[A,Q]],YHI[3Q,4[A,Q],YT[A,C,E,O,Q,S],ZDA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_50"
+        ],
+        "count": 102,
+        "places": [
+            "GIZDKOS[DHI[2Q,3A],HHI[3Q,4[A,Q],YT[A,C,E,G,I]],IHI[3Q,4[A,Q],Y[Q,TA],ZA],JHI[4Q,YTA],KHI[3Q,4[A,Q],YTA],LHI[YT[K,M,O,Q,S],ZD[A,C,E]],MHI[4[A,Q],Y[Q,T[A,C,E,G,I,K]],ZA],NHI[YQ,ZA],PHI[3Q,4[A,Q],YT[A,C,E,G,I]],QHI[2[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],ZD[C,E]],RHI[2[A,Q],3[A,Q],4[A,Q],YT[M,O,Q,S],ZD[C,E]],SHI[2[A,Q],Y[Q,T[Q,S]],ZA],THI[YQ,ZA],UHIYT[A,C,I,K],WHI[3Q,4[A,Q],YT[A,C,E,G,I]],YHI[2[A,Q],3[A,Q]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_51"
+        ],
+        "count": 130,
+        "places": [
+            "GIZDMOS[CHIYT[A,C],DHI[2Q,3[A,Q],4A,YT[G,I]],HHI[2Q,3[A,Q],4[A,Q],YTA],IHI[2A,YQ,Z[A,Q]],JHI[4Q,YT[A,C,E]],KHI[3Q,4A,YT[I,K,M,O]],LHI[YTS,ZD[A,C,E]],MHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],NHI[YT[O,Q,S],ZD[A,C,E]],OHIYT[G,I,K,M,O,Q],PHIYT[C,E,G,I],QHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M]],Z[A,Q]],RHI[4Q,YTA],SHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,O,Q]],Z[A,D[C,E],Q]],UHI[2[A,Q],4Q,YT[A,C,E,G,I,K,M]],VHI[3Q,4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E]],WHI[2A,Y[Q,TS],Z[A,D[A,C,E],Q]],XHI[2Q,3[A,Q],4[A,Q],YT[A,C,E]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_52"
+        ],
+        "count": 175,
+        "places": [
+            "GIZDOOS[BHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,O,Q]],Z[A,Q]],CHI[3[A,Q],YTS,ZDA],DHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,K,M]],HHI[3Q,4[A,Q],YT[A,C,E,G,I]],IHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],KHI[2[A,Q],3[A,Q],4A,Y[Q,TS],Z[A,DA,Q]],LHI[YT[O,Q,S],Z[A,DA,Q]],MHI[2[A,Q],3[A,Q],YT[A,C,E,G,I,K,M]],NHI[2A,Y[Q,T[E,G]],Z[A,Q]],OHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,DA,Q]],PHI[2A,4Q,Y[Q,TA],Z[A,Q]],QHI[2A,Y[Q,T[G,I,K,M,O,Q,S]],Z[A,DA,Q]],RHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I]],Z[A,Q]],SHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,TA],Z[A,Q]],THI[2A,YQ,Z[A,Q]],UHI[2[A,Q],3[A,Q],4A,Y[Q,T[K,M]],Z[A,Q]],VHIYT[Q,S],WHI[2Q,3A],XHI[2[A,Q],3A,YQ,Z[A,Q]],YHI[2Q,3[A,Q],4[A,Q],Y[Q,T[A,C,E]],ZA]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_53"
+        ],
+        "count": 95,
+        "places": [
+            "GIZDQOS[DHI[2A,YQ,Z[A,Q]],GHIZ[A,Q],IHI[2[A,Q],3A,ZQ],JHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K]],Z[A,Q]],KHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,TA],Z[A,Q]],LHI[4[A,Q],YT[A,C,E,G,I,K,M,O]],MHI[4Q,YT[A,C,E]],PHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C]],QHI[4Q,YT[A,O,Q]],RHIYT[O,Q],UHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],VHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C],Z[A,Q]],WHI[4Q,YT[A,C,E,G,I,K,M]],XHI[2[A,Q],3[A,Q],4A,ZQ]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_54"
+        ],
+        "count": 68,
+        "places": [
+            "GIZDSOS[BHI[2[A,Q],3[A,Q],Y[Q,T[O,Q,S]],Z[A,D[A,C,E],Q]],CHI[2A,YQ,Z[A,Q]],DHI[2Q,3[A,Q],4A],JHI[2A,ZQ],KHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],LHI[2A,YQ,Z[A,Q]],NHI[YQ,ZA],OHIYT[A,C,E,G],PHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],QHI[YT[O,Q,S],ZD[A,C]],RHI[2Q,3[A,Q],4A],SHIYT[G,I,K,M],UHI[2Q,3A,YT[E,G,I,K]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_39"
+        ],
+        "count": 48,
+        "places": [
+            "GIZTAOS[BHI[3[A,Q],4[A,Q]],DHI[YQ,ZA],GHI[2[A,Q],3A,YQ,Z[A,Q]],IHI[2Q,3A],JHI[2[A,Q],3A,YQ,Z[A,Q]],KHIYT[K,M],MHI[4Q,YTA],OHI[2A,Z[D[C,E],Q]],PHI[3Q,4[A,Q],YTA],QHI[2A,3Q,4A,YQ,Z[A,Q]],RHIYT[E,G,I,K,M,O],SHIZD[I,K],UHI2[A,Q]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_40"
+        ],
+        "count": 74,
+        "places": [
+            "GIZTCOS[BHI[2A,Y[Q,T[I,K,M,O]],Z[A,Q]],DHI[2Q,3[A,Q],4[A,Q],YT[A,C,E,G,I]],HHI[YQ,ZA],JHIYT[C,E],KHI[YQ,ZA],LHIYT[K,M],NHI[4Q,YT[A,C,E,G,I,K,M,O,Q,S],ZDA],OHI[YT[K,M,O,Q,S],ZD[A,C,E]],PHI[2[A,Q],Y[Q,T[C,E,G,I]],Z[A,D[C,E],Q]],QHI[2Q,3A,YT[G,I,K,M,O,Q,S]],RHI[Y[Q,T[E,G,O,Q,S]],Z[A,DA]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "primary"
+        ],
+        "shapes": [
+            "s_40"
+        ],
+        "count": 2,
+        "places": [
+            "GIZTCOSBHI[4Q,YTA]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_41"
+        ],
+        "count": 28,
+        "places": [
+            "GIZTEOS[BHI3[A,Q],LHI[2[A,Q],3[A,Q],4A,YQ,Z[A,Q]],NHI[4[A,Q],YT[A,C,E,G,I,K]],OHI[2A,ZQ],RHI[2[A,Q],3[A,Q],4[A,Q],YTA,ZQ]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_42"
+        ],
+        "count": 39,
+        "places": [
+            "GIZTGOS[BHI[YT[I,K,M,O,Q,S],ZDA],DHI[3[A,Q],4[A,Q],YQ,ZA],HHI[2Q,3A],JHI[YQ,ZA],KHI[2[A,Q],3A,YQ,Z[A,Q]],MHI[2[A,Q],3A,YQ,Z[A,Q]],NHIYT[A,C],OHIYT[K,M],PHI[YTS,ZD[A,C,E,G,I]]]"
+        ]
+    },
+    {
+        "inventoryTypes": [
+            "resale"
+        ],
+        "shapes": [
+            "s_63"
+        ],
+        "count": 94,
+        "places": []
+    }
+]
