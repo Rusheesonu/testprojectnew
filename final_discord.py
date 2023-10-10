@@ -2,13 +2,13 @@ import requests
 import json
 import time
 import os
+import discord
 
 # Constants
 DATA_FOLDER = 'data'
 MAPPER_FILE = 'mappers.json'
 file_name = 'data_v2' + '.json'
 OUTPUT_FILE = 'final_output_data.json'
-webhook_url = "https://discord.com/api/webhooks/1161306474014842941/0ixkJWR54wgrT2hqppNqoUlqKPE-tNpC_FuBnSuioUFJgUMjBGF3vfplE2XPM_PdeE-O"
 
 
 # Read event IDs from a text file
@@ -24,27 +24,59 @@ def read_event_ids_from_file(file_path):
         return []
 
 # Function to send Discord alerts
-def send_discord_alert(event_name, data_to_send):
-    # Define the message content
-    message = {
-        "content": f"Event Restocked: {event_name}, {data_to_send}"
-    }
+def send_discord_alert(merged_data):
 
-    try:
-        # Send a POST request to the Discord webhook
-        response = requests.post(
-            webhook_url,
-            data=json.dumps(message),
-            headers={'Content-Type': 'application/json'}
-        )
+    # Define your intents
+    intents = discord.Intents.default()
+    intents.typing = False  # Disable typing event (optional)
 
-        # Check if the request was successful
-        if response.status_code == 204:
-            print("Alert sent to Discord.")
+    # Initialize a Discord client with intents
+    client = discord.Client(intents=intents)
+
+    @client.event
+    async def on_ready():
+        print(f'Logged in as {client.user.name} ({client.user.id})')
+
+        # Get the channel where you want to send the embed
+        channel_name = 'general'  # Replace with the desired channel name
+        guild = discord.utils.get(client.guilds, name='TestServer')  # Replace with your server's name
+        channel = discord.utils.get(guild.text_channels, name=channel_name)
+        
+        try :
+            for val in merged_data:
+                tmp_title = (val.get("Event Title"))
+                tmp_date = (val.get("Event Date"))
+                tmp_location_tmp = (val.get("Location"))
+                address = tmp_location_tmp.get("address")
+                addressLocality = (address.get("addressLocality"))
+                addressRegion = (address.get("addressRegion"))
+                total_seats = (val.get("new_seats"))
+        except:
+            pass
+
+        if channel:
+            # Create an embed for the custom message
+            embed = discord.Embed(
+                title=f'Restock Alert For {tmp_title} , {tmp_date} , AT {addressLocality} {addressRegion} | TicketMaster',
+                description=f'{len(total_seats)} Seats have been Restocked',
+                color=discord.Color.blue()  # You can customize the color
+            )
+
+            # Add fields or other customization to the embed as needed
+            embed.add_field(name="Seat Details", value=f'{total_seats}', inline=False)
+
+            # Send the embed
+            await channel.send(embed=embed)
+            
+            
+            # Logout (close) the bot
+            await client.close()
         else:
-            print("Failed to send alert to Discord. Status code:", response.status_code)
-    except Exception as e:
-        print("An error occurred:", str(e))
+            print(f"Could not find a suitable channel to send the message in {guild.name}")
+
+    # Start the bot with your token
+
+    client.run('MTE2MTM2ODIyNzE1OTQ5NDczNg.G6NgoS.P7oHE5gkv8983JMz0mjaE-MH1yArYMPGCcl_2g')
         
 def create_mapper_file(URL1, HEADERS):
     if os.path.exists(os.path.join(DATA_FOLDER, MAPPER_FILE)):
@@ -194,18 +226,7 @@ def main():
             merged_entry["new_seats"] = [json1_entry["name"] for json1_entry in json1 if json1_entry["id"] == tmp_id]
             merged_data.append(merged_entry)
 
-    # Print the merged data
-    data_to_send = (json.dumps(merged_data, indent=4))
-
-
-    print(data_to_send)
-    
-    event_name = "New Tickets Available"  # Replace with the actual event name
-    
-    if data_to_send != []:
-        send_discord_alert(event_name, data_to_send)
-    else:
-        print("No Changes")
+    send_discord_alert(merged_data)
 
     # Removing the old data file and just keeping the New File for the next Run        
     current_file_name = os.path.join(DATA_FOLDER, 'data_v2.json')
