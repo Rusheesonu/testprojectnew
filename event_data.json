@@ -1,28 +1,28 @@
 [
     {
-        "Event ID": "2D005F0489D12678",
+        "Event ID": "06005F1288C81B3A",
         "Event Title": "Travis Scott Utopia Tour Presents Circus Maximus",
-        "Event Date": "2023-10-14T20:00",
+        "Event Date": "2023-10-20T20:00",
         "Location": {
-            "name": "PNC Arena",
+            "name": "T-Mobile Center",
             "address": {
-                "streetAddress": "1400 Edwards Mill Road",
-                "addressLocality": "Raleigh",
-                "addressRegion": "NC",
-                "postalCode": "27607",
+                "streetAddress": "1407 Grand Blvd",
+                "addressLocality": "Kansas City",
+                "addressRegion": "MO",
+                "postalCode": "64106",
                 "addressCountry": "US",
                 "@type": "PostalAddress"
             },
-            "sameAs": "https://www.ticketmaster.com/pnc-arena-tickets-raleigh/venue/369049",
-            "image": "https://s1.ticketm.net/dbimages/21639v.jpg",
+            "sameAs": "https://www.ticketmaster.com/t-mobile-center-tickets-kansas-city/venue/50225",
+            "image": "https://s1.ticketm.net/dbimages/22332v.jpg",
             "geo": {
-                "latitude": "35.803242",
-                "longitude": "-78.722936",
+                "latitude": "39.1015411",
+                "longitude": "-94.5676009",
                 "@type": "GeoCoordinates"
             },
             "@type": "Place"
         },
         "Image URL": "https://s1.ticketm.net/dam/a/900/d0e95074-2a57-4b0e-8cce-781b43a2a900_EVENT_DETAIL_PAGE_16_9.jpg",
-        "Event URL": "https://www.ticketmaster.com/travis-scott-utopia-tour-presents-circus-raleigh-north-carolina-10-14-2023/event/2D005F1FA3013F69"
+        "Event URL": "https://www.ticketmaster.com/travis-scott-utopia-tour-presents-circus-kansas-city-missouri-10-20-2023/event/06005F1288C81B3A"
     }
 ]
