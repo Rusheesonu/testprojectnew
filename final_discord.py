@@ -40,7 +40,7 @@ def send_discord_alert(final_data):
             addressLocality = address.get("addressLocality")
             addressRegion = address.get("addressRegion")
             total_seats_tmp = final_data.get("seat_details")
-            total_seats = [{'price': item['price'], 'seat_number': item['shape_name']} for item in total_seats_tmp]
+            total_seats = [{'price': item['price'], 'seat_number': item['seat_number']} for item in total_seats_tmp]
             chunk_size = 20
             # this is because discord only allows 1024 characters !
             split_json_lists = [total_seats[i:i + chunk_size] for i in range(0, len(total_seats), chunk_size)]
@@ -68,7 +68,7 @@ def send_discord_alert(final_data):
             sys.exit()
 
     # Start the bot with your token
-    client.run('MTE2MTM2ODIyNzE1OTQ5NDczNg.GhiZiq.QOi_s1WzehI_7-bxtLoE4wCkvEvK1vU3e7kDOk')
+    client.run('MTE2MTM2ODIyNzE1OTQ5NDczNg.GWQn6L.Q2DuFAf1sprZ57sR6YYVoxfYgvDlaU9sUhJz48')
 
 # Create a mapper file
 def create_mapper_file(URL1, URL3, cookies_price, headers_price):
@@ -280,7 +280,8 @@ def check_changes(data_v1, data_v2, mappers):
                     changes.append({
                         "count": item_v2['count'],
                         "shape_name": item_v1['shapes'],
-                        "price": shape_info['price']
+                        "price": shape_info['price'],
+                        "seat_number" : shape_info['name']
                     })
                 break
     return changes
