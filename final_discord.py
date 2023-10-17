@@ -41,7 +41,6 @@ def send_discord_alert(final_data):
         channel = discord.utils.get(guild.text_channels, name=channel_name)
         
         total_seats = []
-        split_json_lists = []
         try:
             # Extract data from final_data
             event_title = final_data.get("Event Title")
@@ -52,9 +51,6 @@ def send_discord_alert(final_data):
             addressRegion = address.get("addressRegion")
             total_seats_tmp = final_data.get("seat_details")
             total_seats = [{'price': item['price'], 'seat_number': item['seat_number']} for item in total_seats_tmp]
-            chunk_size = 20
-            # this is because discord only allows 1024 characters !
-            split_json_lists = [total_seats[i:i + chunk_size] for i in range(0, len(total_seats), chunk_size)]
             seat_types_restocked = final_data.get("seat_types_restocked")
         except Exception as e:
             print(f"Error extracting data: {e}")
@@ -64,23 +60,33 @@ def send_discord_alert(final_data):
             # Create and send the Discord embed
             embed = discord.Embed(
                 title=f'Restock Alert For {event_title}, {event_date}, AT {addressLocality} {addressRegion} | TicketMaster',
-                description=f'{len(total_seats)} Seats have been Restocked',
                 color=discord.Color.blue()
             )
             
+            # Create a code block to format the seat count and make the number bold
+            seat_count = f"```Markdown\n Total Number Of Seats Restocked {len(total_seats)}\n```"
+            embed.add_field(name="Description", value=seat_count, inline=False)
+            
             # Add seat details to the embed
-            for i in split_json_lists:
-                pretty_json = json.dumps(i, indent=4)
-                embed.add_field(name="Seat Details", value=pretty_json, inline=False)
+            seat_details = "```"
+            for i in total_seats:
+                price = i.get("price")
+                seat_number = i.get("seat_number")
+                seat_details += f"Seat Number : {seat_number} , Price :  {price}\n"
+            seat_details += "```"
+        
+            embed.add_field(name="Seat Details", value=seat_details, inline=False)
 
-            embed.add_field(name="Seat Type Restocked", value=str(seat_types_restocked), inline=False)
+            formatted_seat_types = ", ".join(seat_types_restocked)
+
+            embed.add_field(name="Seat Type Restocked", value=f'```\n{formatted_seat_types}\n```', inline=False)
 
             await channel.send(embed=embed)
             
             await client.close() 
 
     # Start the bot with your token
-    client.run('MTE2MTM2ODIyNzE1OTQ5NDczNg.GUp1fw.wE4jyt-uIxqNECgFCy1j2z8CqZcziLOXhnzkAI')
+    client.run('MTE2MTM2ODIyNzE1OTQ5NDczNg.G6CQpS.EMiSZbffkt4E8UDqEtjhpnR-r_fCDiEtfB3OiA')
 
 # Create a mapper file
 def create_mapper_file(URL1, URL3, cookies_price, headers_price):
@@ -92,6 +98,8 @@ def create_mapper_file(URL1, URL3, cookies_price, headers_price):
     
     # Fetch and process data from URL1
     response = requests.get(URL1, headers=headers_price)
+    if response.status_code != 200:
+        logging.error(f"Response Not Success: {response.status_code} , {URL1}")
     data = response.json()
     pages = data.get("pages")
     segments = pages[0]['segments']
@@ -99,6 +107,8 @@ def create_mapper_file(URL1, URL3, cookies_price, headers_price):
 
     # Fetch and process data from URL3
     price_respone = requests.get(URL3, cookies=cookies_price, headers=headers_price)
+    if response.status_code != 200:
+        logging.error(f"Response Not Success: {response.status_code} , {URL3}")
     price_data = price_respone.text
     list2 = re.findall(r'\\\"shapes\\\":\[(.*?)\]', price_data)
     list1 = re.findall(r'\"listPriceRange\\\"\:\[{\\\"currency\\\"\:\\\"USD\\\",\\\"min\\\":(.*?),', price_data)
@@ -128,6 +138,8 @@ def create_mapper_file(URL1, URL3, cookies_price, headers_price):
 def fetch_and_save_data(URL2, HEADERS):
     try:
         response = requests.get(URL2, headers=HEADERS)
+        if response.status_code != 200:
+            logging.error(f"Response Not Success: {response.status_code} , {URL2}")
         data = response.json()
         temp_data = data.get("facets")
 
@@ -220,28 +232,50 @@ def main():
                 # ... add other headers here ...
             }
             
+            cookies = {
+                'eps_sid': 'e7a6d93eee084b6bdbc09d42a92c2ddc6cd389b5',
+                'lightstep_guid%2Fco2.sdk': '44434edb2e64a27f',
+                'lightstep_session_id': '6d5d860e6b72d652',
+                'TMUO': 'west_SPb9YyInjChFYrizst3Dp16FHEq2kbVQg+YNNiTdhls=',
+                'lightstep_guid%2Fedp.app': '2f33731c4a843833',
+                'LANGUAGE': 'en-us',
+                'SID': 'Bkjpd6KzC0kBVU6LUrE8Bd6SvqYaCOgkRz0LZRhFtfzMiBObMqHsO0F1ulqrSpxA17yK8JiQXBjeQGj3oMqi',
+                'BID': 'KyVkTn7E4X2ntuXoLoBmrlbfO7XRIUnsjA7L-4ILrOS9bzQmfjXvAx7Y6rVyGUUuwfNDgPUG3lXz1mw',
+                'mt.v': '5.1480159744.1696928485846',
+                'tmff': '',
+                'NDMA': '200',
+                'ms_visitorid': '5ea65d62-dd54-12c4-57b4-c81f00ee0fa2',
+                'NATIVE': '%2Fnative%2Fconversion%2Fe.gif%3Fe%3DeyJ2IjoiMS4xMSIsImF2IjozNjcyMTQsImF0IjozMzg5LCJidCI6MCwiY20iOjczMjI4MiwiY2giOjI5NTg1LCJjayI6e30sImNyIjoyNjAzNzI1NTksImRpIjoiNGVkZWI2YzdjYThlNGQ0NmJmYzM3OTJlMTZlMDcwNTAiLCJkaiI6MCwiaWkiOiJjZWY0N2Y4OTY5Njk0YmJiOTcyN2IzYjRhZTk3MWZmMCIsImRtIjozLCJmYyI6NDM5Njk5MTQ3LCJmbCI6NDI5NzE1NTU1LCJpcCI6IjUyLjIyLjI0MS42MyIsImt3IjoiY2F0X2NvbmNlcnRzLGRtYS41MSxlbi11cyIsIm1rIjoiZG1hLjUxIiwibnciOjEwMDg1LCJwYyI6MSwib3AiOjEsImVjIjo0Ljg0MDkyNiwiZ20iOjAsImVwIjpudWxsLCJwciI6MTE2NTMzLCJydCI6MywicnMiOjUwMCwic2EiOiI1NSIsInNiIjoiaS0wMGNiMjAyMzMzY2FjYmUxOSIsInNwIjo4MDA5MDAsInN0Ijo5NzgzNDIsInVrIjoidWUxLTdmYjNlMThkNzk1ODQ4NTJhNzgwMWRiNmQ2NGIwNmEyIiwiem4iOjE3ODIzNCwidHMiOjE2OTcxNDA4MTA3OTksInBuIjoiaGVyb18xIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJBbWVyaWNhL05ld19Zb3JrIiwiZXQiOjN9%26s%3DDqqNwPT-Hb2ESSM01nKSXqWO9sY',
+                'azk': 'ue1-7fb3e18d79584852a7801db6d64b06a2',
+                'azk-ss': 'true',
+                'discovery_location': '%7B%22geoHash%22%3A%22tepg%22%2C%22latLong%22%3A%2217.500%2C78.610%22%7D',
+                'tmdl': '0',
+                'reese84': '3:pWvEeVCVVbIbZRRmKXtyvA==:74CwvNe0EHTYFQ6lVchOKkXoL7Tx9B+20rNgincwG2WYwbQArft6r9+I2E6RdKOE2eLRC2U6E9GaFcirkX+CdFUwW1YxBfF41cPW2Pcc7eBJDM/ziNc1zs0Idb+HVVFyMpEhkWNT3/EORsE7gGrpSKZB3QSU/41Yd6AKR9r4pyG3nghACBtqsuiaG8hnGEStie9JgJe7trdJP7U44HQyRqZdMvhN7g6e+GiD8JrLoLDArgsqrj7NC30duSh1TSGUjA3P3n6VWous5+nSGh5ZDWa5SoiINh8lQbKL0ClsXkMcWzHJfVYdscUoS9eyL9BurIBo4w6Kau1WKiETuxtYacS1flAGEKLJslvgztop9kpmgVX38a836UCxGm/F4uJyQipGtFkRppkT8xqDpSYlfscTHTQerWH1qTAXewSygv1hRMKFAp1sTkCyItZZhqMdlyDohUxn5iZ1M6ReNudToA==:WuS0cJ/8IqiOvkqTRq79wSbFGL6RZw1wWpkJVFd50r4=',
+                'tmsid': '548a93f2-be08-46cb-8080-0b54b6641e81',
+            }
+            
             
             cookies_price  = {
-                    'eps_sid': 'e7a6d93eee084b6bdbc09d42a92c2ddc6cd389b5',
-                    'lightstep_guid%2Fco2.sdk': '44434edb2e64a27f',
-                    'lightstep_session_id': '6d5d860e6b72d652',
-                    'TMUO': 'west_SPb9YyInjChFYrizst3Dp16FHEq2kbVQg+YNNiTdhls=',
-                    'lightstep_guid%2Fedp.app': '2f33731c4a843833',
-                    'LANGUAGE': 'en-us',
-                    'SID': 'Bkjpd6KzC0kBVU6LUrE8Bd6SvqYaCOgkRz0LZRhFtfzMiBObMqHsO0F1ulqrSpxA17yK8JiQXBjeQGj3oMqi',
-                    'BID': 'KyVkTn7E4X2ntuXoLoBmrlbfO7XRIUnsjA7L-4ILrOS9bzQmfjXvAx7Y6rVyGUUuwfNDgPUG3lXz1mw',
-                    'mt.v': '5.1480159744.1696928485846',
-                    'tmff': '',
-                    'NDMA': '200',
-                    'ms_visitorid': '5ea65d62-dd54-12c4-57b4-c81f00ee0fa2',
-                    'NATIVE': '%2Fnative%2Fconversion%2Fe.gif%3Fe%3DeyJ2IjoiMS4xMSIsImF2IjozNjcyMTQsImF0IjozMzg5LCJidCI6MCwiY20iOjczMjI4MiwiY2giOjI5NTg1LCJjayI6e30sImNyIjoyNjAzNzI1NTksImRpIjoiNGVkZWI2YzdjYThlNGQ0NmJmYzM3OTJlMTZlMDcwNTAiLCJkaiI6MCwiaWkiOiJjZWY0N2Y4OTY5Njk0YmJiOTcyN2IzYjRhZTk3MWZmMCIsImRtIjozLCJmYyI6NDM5Njk5MTQ3LCJmbCI6NDI5NzE1NTU1LCJpcCI6IjUyLjIyLjI0MS42MyIsImt3IjoiY2F0X2NvbmNlcnRzLGRtYS41MSxlbi11cyIsIm1rIjoiZG1hLjUxIiwibnciOjEwMDg1LCJwYyI6MSwib3AiOjEsImVjIjo0Ljg0MDkyNiwiZ20iOjAsImVwIjpudWxsLCJwciI6MTE2NTMzLCJydCI6MywicnMiOjUwMCwic2EiOiI1NSIsInNiIjoiaS0wMGNiMjAyMzMzY2FjYmUxOSIsInNwIjo4MDA5MDAsInN0Ijo5NzgzNDIsInVrIjoidWUxLTdmYjNlMThkNzk1ODQ4NTJhNzgwMWRiNmQ2NGIwNmEyIiwiem4iOjE3ODIzNCwidHMiOjE2OTcxNDA4MTA3OTksInBuIjoiaGVyb18xIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJBbWVyaWNhL05ld19Zb3JrIiwiZXQiOjN9%26s%3DDqqNwPT-Hb2ESSM01nKSXqWO9sY',
-                    'azk': 'ue1-7fb3e18d79584852a7801db6d64b06a2',
-                    'azk-ss': 'true',
-                    'discovery_location': '%7B%22geoHash%22%3A%22tepg%22%2C%22latLong%22%3A%2217.500%2C78.610%22%7D',
-                    'reese84': '3:RYT+MtV1c0mA0F5edDOpoQ==:W5FXLeImQkim4S+TYLL8qinoaEQb7PAL1uAGFKIBuwiuilZsfmMq2CRVl8bQWi/cxKw0GC8fFXf5bDMfF4jCBejBYmZVecyunn7P5IEjSXp3J/xB9LqqIeYrDdjG+BzzhrYmCOZ8dlX9mhqOaRos2pKaQasHo5Fabxcl8lDb/U0VdlyJSDwj84N2jJ+bXaP4j530NQP4imneG7DIb1PqvAGlDZRaRmEfrNhAYKm3ECdww2NbOJe9D5DaoYVBpTuouJVSxN7OkxgJaIq+wyDCoJ9cYD75WXWPOckObrGAj4YxvHhOfs1J8PYgiYMZwrJpSAUvxEUn6bsO5qeOK9Y/FaU8k5lzw5zExy+UxL7CpYFHLPdqYuLyxiBZntcBVzEF7/wb/BhGlfyeQaVS7nQrJPMdyzjOmsocUKON/S0PZHoDdlc4jP9xECSnTIj0Y4zw7TH0tdqkFrL3i1YCuh5kbQ==:wqUhth3CUXY1bTSAXpGNnGUdsrtNOnaSXcdx8fS3bGc=',
-                    'tmsid': '0833bfc6-2ee4-419f-8983-f71ea1e3c73e',
-                    'tmdl': '0',
-                }
+                'eps_sid': 'e7a6d93eee084b6bdbc09d42a92c2ddc6cd389b5',
+                'lightstep_guid%2Fco2.sdk': '44434edb2e64a27f',
+                'lightstep_session_id': '6d5d860e6b72d652',
+                'TMUO': 'west_SPb9YyInjChFYrizst3Dp16FHEq2kbVQg+YNNiTdhls=',
+                'lightstep_guid%2Fedp.app': '2f33731c4a843833',
+                'LANGUAGE': 'en-us',
+                'SID': 'Bkjpd6KzC0kBVU6LUrE8Bd6SvqYaCOgkRz0LZRhFtfzMiBObMqHsO0F1ulqrSpxA17yK8JiQXBjeQGj3oMqi',
+                'BID': 'KyVkTn7E4X2ntuXoLoBmrlbfO7XRIUnsjA7L-4ILrOS9bzQmfjXvAx7Y6rVyGUUuwfNDgPUG3lXz1mw',
+                'mt.v': '5.1480159744.1696928485846',
+                'tmff': '',
+                'NDMA': '200',
+                'ms_visitorid': '5ea65d62-dd54-12c4-57b4-c81f00ee0fa2',
+                'NATIVE': '%2Fnative%2Fconversion%2Fe.gif%3Fe%3DeyJ2IjoiMS4xMSIsImF2IjozNjcyMTQsImF0IjozMzg5LCJidCI6MCwiY20iOjczMjI4MiwiY2giOjI5NTg1LCJjayI6e30sImNyIjoyNjAzNzI1NTksImRpIjoiNGVkZWI2YzdjYThlNGQ0NmJmYzM3OTJlMTZlMDcwNTAiLCJkaiI6MCwiaWkiOiJjZWY0N2Y4OTY5Njk0YmJiOTcyN2IzYjRhZTk3MWZmMCIsImRtIjozLCJmYyI6NDM5Njk5MTQ3LCJmbCI6NDI5NzE1NTU1LCJpcCI6IjUyLjIyLjI0MS42MyIsImt3IjoiY2F0X2NvbmNlcnRzLGRtYS41MSxlbi11cyIsIm1rIjoiZG1hLjUxIiwibnciOjEwMDg1LCJwYyI6MSwib3AiOjEsImVjIjo0Ljg0MDkyNiwiZ20iOjAsImVwIjpudWxsLCJwciI6MTE2NTMzLCJydCI6MywicnMiOjUwMCwic2EiOiI1NSIsInNiIjoiaS0wMGNiMjAyMzMzY2FjYmUxOSIsInNwIjo4MDA5MDAsInN0Ijo5NzgzNDIsInVrIjoidWUxLTdmYjNlMThkNzk1ODQ4NTJhNzgwMWRiNmQ2NGIwNmEyIiwiem4iOjE3ODIzNCwidHMiOjE2OTcxNDA4MTA3OTksInBuIjoiaGVyb18xIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJBbWVyaWNhL05ld19Zb3JrIiwiZXQiOjN9%26s%3DDqqNwPT-Hb2ESSM01nKSXqWO9sY',
+                'azk': 'ue1-7fb3e18d79584852a7801db6d64b06a2',
+                'azk-ss': 'true',
+                'discovery_location': '%7B%22geoHash%22%3A%22tepg%22%2C%22latLong%22%3A%2217.500%2C78.610%22%7D',
+                'tmdl': '0',
+                'tmsid': '16bedab3-2c7c-4f9e-a9be-505240d9c2a2',
+                'reese84': '3:7H282mt8MRWP9ikag5uqIg==:rDHQiHTLTgajaWzFlT2cff8kuxNZ0ZZd66oRuup5UShSZj3U7wPyYYBpleUOgT4DBgu4i+zxsww5EUnHcitJMTOkQNbaYuhol9HlyadsXycK9vs/seuqBL1+Ja7O+xUUsZQYFBpu2cG1BBcZNxDxOuUKv589ytirKlqpvI9hClDPd4kSyuvxA3WUQn2Bg1RkNj1TQJOn5nLv3S0N+lstIgttt9Ea+OvYReZIRrlBmEo/BsNQweoML00mRlupjIw+SpKpj63CeUWCOec+jqa2wp7H8enDXRZyVsSo4/HcjuRLIbcC8w8k8AaOrKOdsTs22kqSbNgFzjzfZmquTlaq2xbkhDB6y4nwNmG7psSSyS3AmiB8g9scNKEUWpaiWb88rltmcG5WpBoD489rIHeHHU16awdASTsVgx+oPgo6FuGOhViE5e8od1PlDXzENpC5lKKU5jjUIOJ0O8JOh1Q3+PGyPb0Q6yPdIWThAhRAWNA21HN35Uy5hfqTfS5jlld1i/vnBlHMAMp2zTD8OxcPpg==:xQHdDAwxJum4FeJTA9zFKd66VoE+QQldcx7XJXvIiws=',
+            }
 
 
 
@@ -250,9 +284,9 @@ def main():
                 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
                 'accept-language': 'en-US,en;q=0.9',
                 'cache-control': 'max-age=0',
-                # 'cookie': 'eps_sid=e7a6d93eee084b6bdbc09d42a92c2ddc6cd389b5; lightstep_guid%2Fco2.sdk=44434edb2e64a27f; lightstep_session_id=6d5d860e6b72d652; TMUO=west_SPb9YyInjChFYrizst3Dp16FHEq2kbVQg+YNNiTdhls=; lightstep_guid%2Fedp.app=2f33731c4a843833; LANGUAGE=en-us; SID=Bkjpd6KzC0kBVU6LUrE8Bd6SvqYaCOgkRz0LZRhFtfzMiBObMqHsO0F1ulqrSpxA17yK8JiQXBjeQGj3oMqi; BID=KyVkTn7E4X2ntuXoLoBmrlbfO7XRIUnsjA7L-4ILrOS9bzQmfjXvAx7Y6rVyGUUuwfNDgPUG3lXz1mw; mt.v=5.1480159744.1696928485846; tmff=; NDMA=200; ms_visitorid=5ea65d62-dd54-12c4-57b4-c81f00ee0fa2; NATIVE=%2Fnative%2Fconversion%2Fe.gif%3Fe%3DeyJ2IjoiMS4xMSIsImF2IjozNjcyMTQsImF0IjozMzg5LCJidCI6MCwiY20iOjczMjI4MiwiY2giOjI5NTg1LCJjayI6e30sImNyIjoyNjAzNzI1NTksImRpIjoiNGVkZWI2YzdjYThlNGQ0NmJmYzM3OTJlMTZlMDcwNTAiLCJkaiI6MCwiaWkiOiJjZWY0N2Y4OTY5Njk0YmJiOTcyN2IzYjRhZTk3MWZmMCIsImRtIjozLCJmYyI6NDM5Njk5MTQ3LCJmbCI6NDI5NzE1NTU1LCJpcCI6IjUyLjIyLjI0MS42MyIsImt3IjoiY2F0X2NvbmNlcnRzLGRtYS41MSxlbi11cyIsIm1rIjoiZG1hLjUxIiwibnciOjEwMDg1LCJwYyI6MSwib3AiOjEsImVjIjo0Ljg0MDkyNiwiZ20iOjAsImVwIjpudWxsLCJwciI6MTE2NTMzLCJydCI6MywicnMiOjUwMCwic2EiOiI1NSIsInNiIjoiaS0wMGNiMjAyMzMzY2FjYmUxOSIsInNwIjo4MDA5MDAsInN0Ijo5NzgzNDIsInVrIjoidWUxLTdmYjNlMThkNzk1ODQ4NTJhNzgwMWRiNmQ2NGIwNmEyIiwiem4iOjE3ODIzNCwidHMiOjE2OTcxNDA4MTA3OTksInBuIjoiaGVyb18xIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJBbWVyaWNhL05ld19Zb3JrIiwiZXQiOjN9%26s%3DDqqNwPT-Hb2ESSM01nKSXqWO9sY; azk=ue1-7fb3e18d79584852a7801db6d64b06a2; azk-ss=true; discovery_location=%7B%22geoHash%22%3A%22tepg%22%2C%22latLong%22%3A%2217.500%2C78.610%22%7D; reese84=3:RYT+MtV1c0mA0F5edDOpoQ==:W5FXLeImQkim4S+TYLL8qinoaEQb7PAL1uAGFKIBuwiuilZsfmMq2CRVl8bQWi/cxKw0GC8fFXf5bDMfF4jCBejBYmZVecyunn7P5IEjSXp3J/xB9LqqIeYrDdjG+BzzhrYmCOZ8dlX9mhqOaRos2pKaQasHo5Fabxcl8lDb/U0VdlyJSDwj84N2jJ+bXaP4j530NQP4imneG7DIb1PqvAGlDZRaRmEfrNhAYKm3ECdww2NbOJe9D5DaoYVBpTuouJVSxN7OkxgJaIq+wyDCoJ9cYD75WXWPOckObrGAj4YxvHhOfs1J8PYgiYMZwrJpSAUvxEUn6bsO5qeOK9Y/FaU8k5lzw5zExy+UxL7CpYFHLPdqYuLyxiBZntcBVzEF7/wb/BhGlfyeQaVS7nQrJPMdyzjOmsocUKON/S0PZHoDdlc4jP9xECSnTIj0Y4zw7TH0tdqkFrL3i1YCuh5kbQ==:wqUhth3CUXY1bTSAXpGNnGUdsrtNOnaSXcdx8fS3bGc=; tmsid=0833bfc6-2ee4-419f-8983-f71ea1e3c73e; tmdl=0',
+                # 'cookie': 'eps_sid=e7a6d93eee084b6bdbc09d42a92c2ddc6cd389b5; lightstep_guid%2Fco2.sdk=44434edb2e64a27f; lightstep_session_id=6d5d860e6b72d652; TMUO=west_SPb9YyInjChFYrizst3Dp16FHEq2kbVQg+YNNiTdhls=; lightstep_guid%2Fedp.app=2f33731c4a843833; LANGUAGE=en-us; SID=Bkjpd6KzC0kBVU6LUrE8Bd6SvqYaCOgkRz0LZRhFtfzMiBObMqHsO0F1ulqrSpxA17yK8JiQXBjeQGj3oMqi; BID=KyVkTn7E4X2ntuXoLoBmrlbfO7XRIUnsjA7L-4ILrOS9bzQmfjXvAx7Y6rVyGUUuwfNDgPUG3lXz1mw; mt.v=5.1480159744.1696928485846; tmff=; NDMA=200; ms_visitorid=5ea65d62-dd54-12c4-57b4-c81f00ee0fa2; NATIVE=%2Fnative%2Fconversion%2Fe.gif%3Fe%3DeyJ2IjoiMS4xMSIsImF2IjozNjcyMTQsImF0IjozMzg5LCJidCI6MCwiY20iOjczMjI4MiwiY2giOjI5NTg1LCJjayI6e30sImNyIjoyNjAzNzI1NTksImRpIjoiNGVkZWI2YzdjYThlNGQ0NmJmYzM3OTJlMTZlMDcwNTAiLCJkaiI6MCwiaWkiOiJjZWY0N2Y4OTY5Njk0YmJiOTcyN2IzYjRhZTk3MWZmMCIsImRtIjozLCJmYyI6NDM5Njk5MTQ3LCJmbCI6NDI5NzE1NTU1LCJpcCI6IjUyLjIyLjI0MS42MyIsImt3IjoiY2F0X2NvbmNlcnRzLGRtYS41MSxlbi11cyIsIm1rIjoiZG1hLjUxIiwibnciOjEwMDg1LCJwYyI6MSwib3AiOjEsImVjIjo0Ljg0MDkyNiwiZ20iOjAsImVwIjpudWxsLCJwciI6MTE2NTMzLCJydCI6MywicnMiOjUwMCwic2EiOiI1NSIsInNiIjoiaS0wMGNiMjAyMzMzY2FjYmUxOSIsInNwIjo4MDA5MDAsInN0Ijo5NzgzNDIsInVrIjoidWUxLTdmYjNlMThkNzk1ODQ4NTJhNzgwMWRiNmQ2NGIwNmEyIiwiem4iOjE3ODIzNCwidHMiOjE2OTcxNDA4MTA3OTksInBuIjoiaGVyb18xIiwiZ2MiOnRydWUsImdDIjp0cnVlLCJncyI6Im5vbmUiLCJkYyI6MSwidHoiOiJBbWVyaWNhL05ld19Zb3JrIiwiZXQiOjN9%26s%3DDqqNwPT-Hb2ESSM01nKSXqWO9sY; azk=ue1-7fb3e18d79584852a7801db6d64b06a2; azk-ss=true; discovery_location=%7B%22geoHash%22%3A%22tepg%22%2C%22latLong%22%3A%2217.500%2C78.610%22%7D; tmdl=0; tmsid=16bedab3-2c7c-4f9e-a9be-505240d9c2a2; reese84=3:7H282mt8MRWP9ikag5uqIg==:rDHQiHTLTgajaWzFlT2cff8kuxNZ0ZZd66oRuup5UShSZj3U7wPyYYBpleUOgT4DBgu4i+zxsww5EUnHcitJMTOkQNbaYuhol9HlyadsXycK9vs/seuqBL1+Ja7O+xUUsZQYFBpu2cG1BBcZNxDxOuUKv589ytirKlqpvI9hClDPd4kSyuvxA3WUQn2Bg1RkNj1TQJOn5nLv3S0N+lstIgttt9Ea+OvYReZIRrlBmEo/BsNQweoML00mRlupjIw+SpKpj63CeUWCOec+jqa2wp7H8enDXRZyVsSo4/HcjuRLIbcC8w8k8AaOrKOdsTs22kqSbNgFzjzfZmquTlaq2xbkhDB6y4nwNmG7psSSyS3AmiB8g9scNKEUWpaiWb88rltmcG5WpBoD489rIHeHHU16awdASTsVgx+oPgo6FuGOhViE5e8od1PlDXzENpC5lKKU5jjUIOJ0O8JOh1Q3+PGyPb0Q6yPdIWThAhRAWNA21HN35Uy5hfqTfS5jlld1i/vnBlHMAMp2zTD8OxcPpg==:xQHdDAwxJum4FeJTA9zFKd66VoE+QQldcx7XJXvIiws=',
                 'dnt': '1',
-                'if-none-match': 'W/"11jo6cra1hl582x"',
+                'if-none-match': 'W/"172akyfeluy5kw5"',
                 'referer': 'https://www.ticketmaster.com/travis-scott-tickets/artist/1788754',
                 'sec-ch-ua': '"Chromium";v="117", "Not;A=Brand";v="8"',
                 'sec-ch-ua-mobile': '?0',
@@ -306,7 +340,7 @@ if __name__ == "__main__":
     
     def run_main(sc):
         main()
-        s.enter(30, 1, run_main, (sc,))
+        s.enter(5, 1, run_main, (sc,))
     
     s.enter(0, 1, run_main, (s,))
     s.run()
