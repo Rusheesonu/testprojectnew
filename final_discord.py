@@ -139,6 +139,7 @@ def fetch_and_save_data(URL2, HEADERS):
     try:
         response = requests.get(URL2, headers=HEADERS)
         if response.status_code != 200:
+            time.sleep(20)
             logging.error(f"Response Not Success: {response.status_code} , {URL2}")
         data = response.json()
         temp_data = data.get("facets")
